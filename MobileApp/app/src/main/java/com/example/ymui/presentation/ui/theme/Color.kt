@@ -1,11 +1,27 @@
 package com.example.ymui.presentation.ui.theme
 
+import android.graphics.ColorMatrix
+import androidx.compose.runtime.staticCompositionLocalOf
 import androidx.compose.ui.graphics.Color
 
-val Purple80 = Color(0xFFD0BCFF)
-val PurpleGrey80 = Color(0xFFCCC2DC)
-val Pink80 = Color(0xFFEFB8C8)
+data class ColorPalette(
+    val background: Color,
+    val backgroundElement: Color,
+    val colorHeadlineText: Color,
+    val colorCommonText: Color,
+    val colorTextInElement: Color,
+    val colorShadow: Color,
+    val colorIcon: Color
+)
 
-val Purple40 = Color(0xFF6650a4)
-val PurpleGrey40 = Color(0xFF625b71)
-val Pink40 = Color(0xFF7D5260)
+val mainTheme = ColorPalette(
+    background = Color(0xFFFFFFFF),
+    backgroundElement = Color(0xFF3FADE5),
+    colorHeadlineText = Color(0xFF000000),
+    colorCommonText = Color(0xFF000000),
+    colorTextInElement = Color(0xFF000000),
+    colorShadow = Color(0xFF000000),
+    colorIcon = Color(0xFFFFFFFF)
+)
+
+val LocalColor = staticCompositionLocalOf { mainTheme }
